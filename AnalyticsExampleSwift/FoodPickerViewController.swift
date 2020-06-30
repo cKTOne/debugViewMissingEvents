@@ -50,4 +50,33 @@ class FoodPickerViewController: UIViewController, UIPickerViewDelegate, UIPicker
     return foodStuffs[row]
   }
 
+    @IBAction func runEvents(_ sender: Any) {
+        DispatchQueue.global(qos: .background).async {
+            self.runEventsAsync(firstStart: true)
+        }
+    }
+    
+    private func runEventsAsync(firstStart: Bool) {
+        for eventSubType in eventChain {
+            DispatchQueue.main.sync {
+                let event: EventType.OBEvent = firstStart ? .firstStart(eventSubType) : .general(eventSubType)
+                FirebaseEventTracker.track(.obevent(event))
+            }
+            sleep(1)
+        }
+    }
+    
+    let eventChain: [EventType.Onboarding] = [
+        .start,
+        .screenShown(.keyboardInstall),
+        .ctaSelected(.keyboardInstall),
+        .screenShown(.iMessageInstall),
+        .ctaSelected(.iMessageInstall),
+        .screenShown(.emojiGames),
+        .ctaSelected(.emojiGames),
+        .screenShown(.emojiRequest),
+        .ctaSelected(.emojiRequest),
+        .complete
+    ]
+    
 }
