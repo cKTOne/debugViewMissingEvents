@@ -49,8 +49,13 @@ class FoodPickerViewController: UIViewController, UIPickerViewDelegate, UIPicker
   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
     return foodStuffs[row]
   }
-
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var button: UIButton!
+    
     @IBAction func runEvents(_ sender: Any) {
+        activityIndicator.isHidden = false
+        button.isEnabled = false
         DispatchQueue.global(qos: .background).async {
             self.runEventsAsync(firstStart: true)
         }
@@ -63,6 +68,10 @@ class FoodPickerViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 FirebaseEventTracker.track(.obevent(event))
             }
             sleep(1)
+        }
+        DispatchQueue.main.sync {
+            activityIndicator.isHidden = true
+            button.isEnabled = true
         }
     }
     

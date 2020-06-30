@@ -75,6 +75,9 @@
                                     <action selector="runEvents:" destination="9aa-Nc-DxV" eventType="touchUpInside" id="YK7-kM-PVJ"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="J68-cP-dbG">
+                                <rect key="frame" x="169" y="89" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -85,6 +88,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="dRL-3M-rXu" secondAttribute="trailing" id="W8N-19-sBA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Veg-cO-gv0" secondAttribute="trailing" constant="42" id="Yht-8R-1nc"/>
                             <constraint firstItem="mef-P0-8Mc" firstAttribute="top" secondItem="7Bw-iC-Vpq" secondAttribute="bottom" id="bx7-0K-Fbl"/>
+                            <constraint firstItem="J68-cP-dbG" firstAttribute="centerX" secondItem="Veg-cO-gv0" secondAttribute="centerX" id="c8c-mc-Gcr"/>
+                            <constraint firstItem="J68-cP-dbG" firstAttribute="centerY" secondItem="Veg-cO-gv0" secondAttribute="centerY" id="gZz-MZ-hTl"/>
                             <constraint firstItem="dRL-3M-rXu" firstAttribute="leading" secondItem="e62-9h-gXP" secondAttribute="leadingMargin" id="iGi-SV-I0G"/>
                             <constraint firstItem="Veg-cO-gv0" firstAttribute="top" secondItem="mef-P0-8Mc" secondAttribute="bottom" constant="8" id="ohS-Wv-gbR"/>
                             <constraint firstItem="mef-P0-8Mc" firstAttribute="centerX" secondItem="e62-9h-gXP" secondAttribute="centerX" id="yIO-gY-HbY"/>
@@ -100,6 +105,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="PLa-vZ-3wU"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="J68-cP-dbG" id="kBO-V9-qCQ"/>
+                        <outlet property="button" destination="Veg-cO-gv0" id="VdJ-fB-8ta"/>
                         <segue destination="aUL-89-tJW" kind="presentation" identifier="goToShareScreen" id="FGf-Zz-fxS"/>
                     </connections>
                 </viewController>
