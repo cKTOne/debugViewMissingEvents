@@ -31,7 +31,7 @@
 		9B59399DF98EF68C9E436A40 /* Pods_AnalyticsExampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E05FC36DCA66CCD8D0BF9B80 /* Pods_AnalyticsExampleSwift.framework */; };
 		A10E53C424AB240E0023ED8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10E53C324AB240E0023ED8E /* GoogleService-Info.plist */; };
 		A10E53C524AB240E0023ED8E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A10E53C324AB240E0023ED8E /* GoogleService-Info.plist */; };
-		A10E53CE24AB29C90023ED8E /* EventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E53CD24AB29C90023ED8E /* EventHelper.swift */; };
+		A14901EF24AB7F3D00B74672 /* EventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14901EE24AB7F3D00B74672 /* EventHelper.swift */; };
 		EF01600C1BD07C1F00F8DA01 /* AnalyticsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF01600B1BD07C1F00F8DA01 /* AnalyticsImages.xcassets */; };
 		EF01600D1BD07C1F00F8DA01 /* AnalyticsImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF01600B1BD07C1F00F8DA01 /* AnalyticsImages.xcassets */; };
 		EFB6C1B61C6524F4007CCA78 /* FoodPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6C1B51C6524F4007CCA78 /* FoodPickerViewController.m */; };
@@ -97,7 +97,7 @@
 		5FDE05631B0DAD5C0037B82F /* AppTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppTests.m; sourceTree = "<group>"; };
 		8183FC0A98818E01EB859A12 /* Pods-AnalyticsExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsExample.release.xcconfig"; path = "Target Support Files/Pods-AnalyticsExample/Pods-AnalyticsExample.release.xcconfig"; sourceTree = "<group>"; };
 		A10E53C324AB240E0023ED8E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A10E53CD24AB29C90023ED8E /* EventHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventHelper.swift; sourceTree = "<group>"; };
+		A14901EE24AB7F3D00B74672 /* EventHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHelper.swift; sourceTree = "<group>"; };
 		B601D53F3B2BCFD33C7EAE84 /* Pods-AnalyticsExampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsExampleSwift.debug.xcconfig"; path = "Target Support Files/Pods-AnalyticsExampleSwift/Pods-AnalyticsExampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D276741CE5211305A8D621B0 /* Pods-AnalyticsExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-AnalyticsExampleTests/Pods-AnalyticsExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFF76E87CF29833214E098C7 /* Pods-AnalyticsExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticsExample.debug.xcconfig"; path = "Target Support Files/Pods-AnalyticsExample/Pods-AnalyticsExample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,7 +244,7 @@
 				5F9961071AE0CF4F0034F503 /* LaunchScreen.xib */,
 			);
 			name = Shared;
-			path = ../shared;
+			path = shared;
 			sourceTree = "<group>";
 		};
 		5FC29E541AE9255700668C8D /* Images */ = {
@@ -278,9 +278,10 @@
 		A10E53CC24AB29B50023ED8E /* TestAdditions */ = {
 			isa = PBXGroup;
 			children = (
-				A10E53CD24AB29C90023ED8E /* EventHelper.swift */,
+				A14901EE24AB7F3D00B74672 /* EventHelper.swift */,
 			);
-			path = "\U0010TestAdditions";
+			name = "\U0010TestAdditions";
+			path = TestAdditions;
 			sourceTree = "<group>";
 		};
 		EC8914C86970842518F36257 /* Pods */ = {
@@ -648,9 +649,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A14901EF24AB7F3D00B74672 /* EventHelper.swift in Sources */,
 				5F3B16811AFC453200860007 /* CircleImageView.m in Sources */,
 				5FC04A811AF1DF8300F787CA /* PatternTabBarController.swift in Sources */,
-				A10E53CE24AB29C90023ED8E /* EventHelper.swift in Sources */,
 				5F5A53801ADE67D500F81DF0 /* ViewController.swift in Sources */,
 				EFB6C1BA1C656D38007CCA78 /* FoodPickerViewController.swift in Sources */,
 				5F5A537E1ADE67D500F81DF0 /* AppDelegate.swift in Sources */,
